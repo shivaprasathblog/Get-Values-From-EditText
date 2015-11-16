@@ -11,9 +11,9 @@ import android.widget.TextView;
 public class MainActivity extends Activity 
 
 {
-	//Define Edittext,Textview and Button as et,tv,b respectively
+	//STEP 1: Declare the edittext ,Textview and button as et ,tv and  b
 	EditText et;
-    TextView tv;
+    	TextView tv;
 	Button b;
 
 	@Override
@@ -22,12 +22,12 @@ public class MainActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		//Refer the edittext, textview , button with their respective id's from XML
+		//STEP 2: Refer the edittext,textview and button from xml
 		et=(EditText)findViewById(R.id.editText1);
 		tv=(TextView)findViewById(R.id.textView1);
 		b=(Button)findViewById(R.id.button1);
 		
-		//Set the listener for Button , we use onclik listener here 
+		//STEP 3: Set the listener and create the object for the listener (button-b)
 		b.setOnClickListener(new OnClickListener() 
 		{
 			
@@ -36,9 +36,9 @@ public class MainActivity extends Activity
 			{
 				// TODO Auto-generated method stub
 				
-				//Storing the value got from edittext in String "str"
+				//STEP 4:Receving the value got from edittext in String "str"
 				String str=et.getText().toString();
-				//Setting the value got from edittext in Textview 
+				//STEP 5: Set the message to be displayed in edit text on button click
 				tv.setText(str);
 				
 			}
